@@ -3,11 +3,11 @@
 /*
 Demonstrate loops,  DONE
 arrays,	DONE
-slices, MAYBE MORE
+slices, DONE
 math operations, DONE
 conditional statements, DONE
-functions/methods, 
-user input/output
+functions/methods, DONE
+user input/output DONE
 */
 
 
@@ -107,14 +107,30 @@ func playWithMethods(){
 	T.DoSomething()
 }
 
+func playWithInput() {
+	var i int 
+	fmt.Print("\nInput an integer: ")
+	fmt.Scan(&i)
+	fmt.Println(i, "was a poor choice")
+}
+
 
 func main(){
 	fmt.Println("Program B")
-	//playWithLoops()
-	//playWithArrays()
-	//playWithSclices()
-	//playWithMath()
-	//playWithConditionals()
+	println("\n-----------------------\nLOOPS:\n-----------------------")
+	playWithLoops()
+	println("\n-----------------------\nARRAYS:\n-----------------------")
+	playWithArrays()
+	println("\n-----------------------\nSLICES:\n-----------------------")
+	playWithSclices()
+	println("\n-----------------------\nMATH:\n-----------------------")
+	playWithMath()
+	println("\n-----------------------\nCONDITIONALS:\n-----------------------")
+	playWithConditionals()
+	println("\n-----------------------\nMETHODS/STRUCTS:\n-----------------------")
 	playWithMethods()
+	println("\n-----------------------\nINPUTS:\n-----------------------")
+	playWithInput()
+
 
 }
