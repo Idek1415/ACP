@@ -19,6 +19,19 @@ import (
 	"math"
 )
 
+// type Thing interface {
+// 	DoSomething()
+// }
+
+type Thing struct {
+	thingNumber int
+	thingSkill string
+}
+
+func (t Thing) DoSomething() {
+	fmt.Println("I am Thing ", t.thingNumber, " and I am good at ", t.thingSkill)
+}
+
 func playWithLoops(){
 	fmt.Println("Loop counts to 4")
 	for i := 1; i < 5; i ++{
@@ -89,18 +102,6 @@ func playWithConditionals(){
 }
 
 func playWithMethods(){
-
-	type Thing interface {
-		DoSomething()
-	}
-	type Thing struct {
-		thingNumber int
-		thingSkill string
-	}
-	
-	func (t Thing) DoSomething() {
-		fmt.Println("I am Thing ", t.thingNumber, " and I am good at ", t.thingSkill)
-	}
 
 	T := Thing{thingNumber: 0, thingSkill: "nothing"}
 	T.DoSomething()
